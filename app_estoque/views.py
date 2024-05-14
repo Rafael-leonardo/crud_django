@@ -3,7 +3,7 @@ from .models import Produto
 
 def home(request):
     produtos = Produto.objects.order_by('-id_produto')[:4]
-    
+
     return render(request, 'index/home.html', {'produtos':produtos})
 
 def listagem_produtos(request):
